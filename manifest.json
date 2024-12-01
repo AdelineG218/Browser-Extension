@@ -1,16 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "Instant Translate",
-    "description": "An Extension that Translates Text With the Press of a Button",
-    "version": "1.0",
-    "permissions": ["activeTab", "storage"],
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-    }],
-    "host_permissions": ["https://libretranslate.com/*"],
-    "action": {
-      "default_popup": "hello.html",
-      "default_icon": "hello-icon.png"
-    }
+  "manifest_version": 3,
+  "name": "Definition Buddy",
+  "description": "An Extension that Saves and Defines Text With the Press of a Button",
+  "version": "1.0",
+  "permissions": ["activeTab", "contextMenus", "storage"],
+  "host_permissions": [
+    "https://api.dictionaryapi.dev/*"
+  ],
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Definition Buddy",
+    "default_icon": "hello-icon.png"
+  }
   }
