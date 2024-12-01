@@ -1,8 +1,14 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "Instant Translate",
+    "description": "An Extension that Translates Text With the Press of a Button",
     "version": "1.0",
+    "permissions": ["activeTab", "storage"],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }],
+    "host_permissions": ["https://translation.googleapis.com/*"],
     "action": {
       "default_popup": "hello.html",
       "default_icon": "hello-icon.png"
