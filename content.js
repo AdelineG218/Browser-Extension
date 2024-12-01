@@ -21,7 +21,7 @@ function createPopup(text, x, y) {
 }
 
 // Fetch translation
-async function fetchTranslationLibre(text, targetLang = "en") {
+async function fetchTranslation(text, targetLang = "en") {
     const response = await fetch("https://libretranslate.com/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
